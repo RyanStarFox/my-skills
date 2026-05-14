@@ -5,85 +5,97 @@ My personal collection of [Claude Code](https://code.claude.com/docs/en/skills) 
 ## Installation
 
 ```bash
-git clone --recurse-submodules https://github.com/RyanStarFox/my-skills.git
+git clone https://github.com/RyanStarFox/my-skills.git
 cd my-skills
 ./install.sh
 ```
 
 The install script symlinks all skills into `~/.claude/skills/`, making them available across all your projects.
 
-To update third-party skills:
-
-```bash
-git submodule update --remote --merge
-./install.sh
-```
-
 ## Available skills
 
-### Third-party skills (via git submodules)
-
-| Skill | Source | Description |
-|-------|--------|-------------|
-| `ui-ux-pro-max` | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | Design intelligence — 67 UI styles, 161 color palettes, 57 font pairings |
-| `banner-design` | ui-ux-pro-max-skill | Banner and hero image design |
-| `brand` | ui-ux-pro-max-skill | Brand guidelines and identity |
-| `design` | ui-ux-pro-max-skill | General UI/UX design guidance |
-| `design-system` | ui-ux-pro-max-skill | Design system generation |
-| `slides` | ui-ux-pro-max-skill | Slide deck design |
-| `ui-styling` | ui-ux-pro-max-skill | UI component styling |
-| `pptx` | [anthropics/skills](https://github.com/anthropics/skills) | PowerPoint creation, editing, and analysis |
-| `pdf` | anthropics/skills | PDF creation and editing |
-| `docx` | anthropics/skills | Word document creation and editing |
-| `xlsx` | anthropics/skills | Excel spreadsheet creation and editing |
-| `mcp-builder` | anthropics/skills | Build MCP servers |
-| `skill-creator` | anthropics/skills | Create new Claude Code skills |
-| `frontend-design` | anthropics/skills | Frontend UI design guidance |
-| `canvas-design` | anthropics/skills | Canvas and visual design |
-| `brand-guidelines` | anthropics/skills | Brand guidelines application |
-| ... | | _and more from anthropics/skills_ |
-
-### Custom skills
+### Design & Creative (from [ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill))
 
 | Skill | Description |
 |-------|-------------|
-| _(your custom skills here)_ | |
+| `ui-ux-pro-max` | Design intelligence — 67 UI styles, 161 color palettes, 57 font pairings, 99 UX guidelines |
+| `banner-design` | Banner and hero image design |
+| `brand` | Brand guidelines and identity |
+| `design` | General UI/UX design guidance |
+| `design-system` | Design system generation |
+| `slides` | Slide deck design |
+| `ui-styling` | UI component styling |
+
+### Document Skills (from [anthropics/skills](https://github.com/anthropics/skills))
+
+| Skill | Description |
+|-------|-------------|
+| `pptx` | PowerPoint creation, editing, and analysis |
+| `pdf` | PDF creation and editing |
+| `docx` | Word document creation and editing |
+| `xlsx` | Excel spreadsheet creation and editing |
+
+### Development & Technical
+
+| Skill | Description |
+|-------|-------------|
+| `mcp-builder` | Build MCP (Model Context Protocol) servers |
+| `skill-creator` | Create new Claude Code skills |
+| `webapp-testing` | Test web applications with Playwright |
+| `web-artifacts-builder` | Build complex HTML artifacts |
+| `claude-api` | Build and optimize Claude API applications |
+
+### Design & Communication
+
+| Skill | Description |
+|-------|-------------|
+| `frontend-design` | Frontend UI design guidance |
+| `canvas-design` | Canvas and visual design |
+| `brand-guidelines` | Brand guidelines application |
+| `theme-factory` | Theme generation for artifacts |
+| `algorithmic-art` | Algorithmic art generation |
+| `internal-comms` | Internal communications writing |
+| `doc-coauthoring` | Document co-authoring workflow |
+| `slack-gif-creator` | Create GIFs for Slack |
 
 ## Creating a new skill
 
 ```bash
-# Copy the template
 cp -r template-skill my-new-skill
-
-# Edit the SKILL.md file
-# See https://code.claude.com/docs/en/skills for full reference
+# Edit my-new-skill/SKILL.md
 ```
 
-Or use the skill-creator from anthropics/skills: `/skill-creator`
+Or invoke the skill-creator: `/skill-creator`
 
 ## Structure
 
 ```
 my-skills/
 ├── README.md
-├── install.sh                    # Symlinks skills to ~/.claude/skills/
-├── template-skill/               # Scaffold for creating new skills
-│   └── SKILL.md
-├── ui-ux-pro-max-skill/          # Git submodule — nextlevelbuilder/ui-ux-pro-max-skill
-└── anthropics-skills/            # Git submodule — anthropics/skills
-    └── skills/
-        ├── pptx/
-        ├── pdf/
-        ├── docx/
-        └── ...
-```
-
-## Adding third-party skills
-
-```bash
-# As a git submodule (recommended for large/complex skills)
-git submodule add <repo-url> <directory-name>
-
-# Or copy the skill directory directly (for simple single-file skills)
-cp -r /path/to/skill ./skill-name
+├── install.sh
+├── template-skill/           # Scaffold for creating new skills
+├── ui-ux-pro-max/            # Design intelligence skill
+├── pptx/                     # PowerPoint skill
+├── pdf/                      # PDF skill
+├── docx/                     # Word skill
+├── xlsx/                     # Excel skill
+├── mcp-builder/              # MCP server builder
+├── skill-creator/            # Skill creation assistant
+├── frontend-design/          # Frontend design guidance
+├── canvas-design/            # Canvas design
+├── brand-guidelines/         # Brand guidelines
+├── theme-factory/            # Theme generation
+├── algorithmic-art/          # Algorithmic art
+├── internal-comms/           # Internal communications
+├── doc-coauthoring/          # Document co-authoring
+├── webapp-testing/           # Web app testing
+├── web-artifacts-builder/    # HTML artifacts builder
+├── claude-api/               # Claude API integration
+├── slack-gif-creator/        # Slack GIF creator
+├── banner-design/            # Banner design
+├── brand/                    # Brand identity
+├── design/                   # UI/UX design
+├── design-system/            # Design system
+├── slides/                   # Slide deck design
+└── ui-styling/               # UI styling
 ```
