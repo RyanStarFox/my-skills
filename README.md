@@ -22,7 +22,6 @@ The install script symlinks all skills into `~/.claude/skills/`, making them ava
 | `banner-design` | Banner and hero image design |
 | `brand` | Brand guidelines and identity |
 | `design` | General UI/UX design guidance |
-| `design-system` | Design system generation |
 | `slides` | Slide deck design |
 | `ui-styling` | UI component styling |
 
@@ -34,6 +33,7 @@ The install script symlinks all skills into `~/.claude/skills/`, making them ava
 | `pdf` | PDF creation and editing |
 | `docx` | Word document creation and editing |
 | `xlsx` | Excel spreadsheet creation and editing |
+| `ppt-builder` | Chinese PPT template-based presentation builder |
 
 ### Development & Technical
 
@@ -44,6 +44,8 @@ The install script symlinks all skills into `~/.claude/skills/`, making them ava
 | `webapp-testing` | Test web applications with Playwright |
 | `web-artifacts-builder` | Build complex HTML artifacts |
 | `claude-api` | Build and optimize Claude API applications |
+| `claude-md-improver` | Audit and improve CLAUDE.md files in repositories |
+| `playground` | Create interactive HTML playgrounds |
 
 ### Design & Communication
 
@@ -57,6 +59,33 @@ The install script symlinks all skills into `~/.claude/skills/`, making them ava
 | `internal-comms` | Internal communications writing |
 | `doc-coauthoring` | Document co-authoring workflow |
 | `slack-gif-creator` | Create GIFs for Slack |
+| `gorden-ppt-skill` | Chinese PPT template-based presentation builder (19 templates) |
+
+### Workflow & Process (from superpowers)
+
+| Skill | Description |
+|-------|-------------|
+| `using-superpowers` | Establish how to find and use skills |
+| `brainstorming` | Explore user intent and design before implementation |
+| `writing-plans` | Write implementation plans from specs/requirements |
+| `executing-plans` | Execute implementation plans with review checkpoints |
+| `subagent-driven-development` | Execute independent tasks with sub-agents |
+| `dispatching-parallel-agents` | Dispatch parallel agents for independent tasks |
+| `finishing-a-development-branch` | Guide completion of development work |
+| `requesting-code-review` | Verify work meets requirements before merging |
+| `receiving-code-review` | Process code review feedback with technical rigor |
+| `test-driven-development` | Write tests before implementation code |
+| `systematic-debugging` | Debug systematically before proposing fixes |
+| `verification-before-completion` | Verify work before claiming completion |
+| `using-git-worktrees` | Isolate feature work with git worktrees |
+| `grill-me` | Interview the user relentlessly about a plan or design |
+
+### Meta & Tooling
+
+| Skill | Description |
+|-------|-------------|
+| `writing-skills` | Create, edit, and verify skills |
+| `writing-rules` | Create hookify rules |
 
 ## Creating a new skill
 
@@ -66,36 +95,3 @@ cp -r template-skill my-new-skill
 ```
 
 Or invoke the skill-creator: `/skill-creator`
-
-## Structure
-
-```
-my-skills/
-├── README.md
-├── install.sh
-├── template-skill/           # Scaffold for creating new skills
-├── ui-ux-pro-max/            # Design intelligence skill
-├── pptx/                     # PowerPoint skill
-├── pdf/                      # PDF skill
-├── docx/                     # Word skill
-├── xlsx/                     # Excel skill
-├── mcp-builder/              # MCP server builder
-├── skill-creator/            # Skill creation assistant
-├── frontend-design/          # Frontend design guidance
-├── canvas-design/            # Canvas design
-├── brand-guidelines/         # Brand guidelines
-├── theme-factory/            # Theme generation
-├── algorithmic-art/          # Algorithmic art
-├── internal-comms/           # Internal communications
-├── doc-coauthoring/          # Document co-authoring
-├── webapp-testing/           # Web app testing
-├── web-artifacts-builder/    # HTML artifacts builder
-├── claude-api/               # Claude API integration
-├── slack-gif-creator/        # Slack GIF creator
-├── banner-design/            # Banner design
-├── brand/                    # Brand identity
-├── design/                   # UI/UX design
-├── design-system/            # Design system
-├── slides/                   # Slide deck design
-└── ui-styling/               # UI styling
-```
